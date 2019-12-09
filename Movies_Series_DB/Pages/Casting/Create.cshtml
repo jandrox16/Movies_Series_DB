@@ -1,0 +1,72 @@
+﻿@page
+@model Movies_Series_DB.CreateModel
+
+@{
+    ViewData["Title"] = "Añadir";
+}
+
+<h2>Añadir elemento</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Casting.NombreDir" class="control-label"></label>
+                <input asp-for="Casting.NombreDir" class="form-control" />
+                <span asp-validation-for="Casting.NombreDir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Casting.ApellidosDir" class="control-label"></label>
+                <input asp-for="Casting.ApellidosDir" class="form-control" />
+                <span asp-validation-for="Casting.ApellidosDir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Casting.PaisDir" class="control-label"></label>
+                <input asp-for="Casting.PaisDir" class="form-control" />
+                <span asp-validation-for="Casting.PaisDir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Casting.FechaNacDir" class="control-label"></label>
+                <input asp-for="Casting.FechaNacDir" class="form-control" />
+                <span asp-validation-for="Casting.FechaNacDir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Casting.NombreActPpal" class="control-label"></label>
+                <input asp-for="Casting.NombreActPpal" class="form-control" />
+                <span asp-validation-for="Casting.NombreActPpal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Casting.ApellidosActPpal" class="control-label"></label>
+                <input asp-for="Casting.ApellidosActPpal" class="form-control" />
+                <span asp-validation-for="Casting.ApellidosActPpal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Casting.PaisActPpal" class="control-label"></label>
+                <input asp-for="Casting.PaisActPpal" class="form-control" />
+                <span asp-validation-for="Casting.PaisActPpal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Casting.FechaNacActPpal" class="control-label"></label>
+                <input asp-for="Casting.FechaNacActPpal" class="form-control" />
+                <span asp-validation-for="Casting.FechaNacActPpal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Casting.PersonajeActPpal" class="control-label"></label>
+                <input asp-for="Casting.PersonajeActPpal" class="form-control" />
+                <span asp-validation-for="Casting.PersonajeActPpal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Volver al listado</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

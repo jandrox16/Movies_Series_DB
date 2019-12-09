@@ -1,0 +1,77 @@
+﻿@page
+@model Movies_Series_DB.DeleteModel
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h2>Eliminar elemento</h2>
+
+<h4>¿Estás seguro de querer eliminar este elemento?</h4>
+
+<div>
+    <h4>Casting</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Casting.NombreDir)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Casting.NombreDir)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Casting.ApellidosDir)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Casting.ApellidosDir)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Casting.PaisDir)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Casting.PaisDir)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Casting.FechaNacDir)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Casting.FechaNacDir)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Casting.NombreActPpal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Casting.NombreActPpal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Casting.ApellidosActPpal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Casting.ApellidosActPpal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Casting.PaisActPpal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Casting.PaisActPpal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Casting.FechaNacActPpal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Casting.FechaNacActPpal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Casting.PersonajeActPpal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Casting.PersonajeActPpal)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Casting.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Volver al listado</a>
+    </form>
+</div>

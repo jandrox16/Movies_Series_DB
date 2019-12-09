@@ -1,0 +1,57 @@
+﻿@page "{searchString?}"
+@model Movies_Series_DB.Pages.Peliculas.IndexModel
+
+@{
+    ViewData["Title"] = "Listado";
+}
+
+<h2>Listado de Películas y Series</h2>
+
+<p>
+    <a asp-page="Create">Añadir elemento</a>
+</p>
+<form>
+    <p>
+        Genero: <select asp-for="GeneroPelicula" asp-items="Model.Generos">
+            <option value="">All</option>
+        </select>
+        Título: <input type="text" asp-for="Busqueda" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pelicula[0].Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pelicula[0].Genero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pelicula[0].FechaSalida)
+            </th>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Pelicula)
+        {
+            <tr>
+                <td>
+                    <a asp-page="./Details" asp-route-id="@item.ID">@Html.DisplayFor(modelItem => item.Titulo)</a>
+</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaSalida)
+                </td>
+                <td>
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

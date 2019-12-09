@@ -1,0 +1,84 @@
+﻿@page
+@model Movies_Series_DB.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Casting[0].NombreDir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Casting[0].ApellidosDir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Casting[0].PaisDir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Casting[0].FechaNacDir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Casting[0].NombreActPpal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Casting[0].ApellidosActPpal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Casting[0].PaisActPpal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Casting[0].FechaNacActPpal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Casting[0].PersonajeActPpal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Casting) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreDir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidosDir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaisDir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacDir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreActPpal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidosActPpal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaisActPpal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacActPpal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonajeActPpal)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

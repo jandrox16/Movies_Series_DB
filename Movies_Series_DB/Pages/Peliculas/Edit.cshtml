@@ -1,0 +1,59 @@
+﻿@page "{id:int}"
+@model Movies_Series_DB.Pages.Peliculas.EditModel
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h2>Editar elemento</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Pelicula.ID" />
+            <div class="form-group">
+                <label asp-for="Pelicula.Titulo" class="control-label"></label>
+                <input asp-for="Pelicula.Titulo" class="form-control" />
+                <span asp-validation-for="Pelicula.Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pelicula.FechaSalida" class="control-label"></label>
+                <input asp-for="Pelicula.FechaSalida" class="form-control" />
+                <span asp-validation-for="Pelicula.FechaSalida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pelicula.Genero" class="control-label"></label>
+                <input asp-for="Pelicula.Genero" class="form-control" />
+                <span asp-validation-for="Pelicula.Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pelicula.Sinopsis" class="control-label"></label>
+                <input asp-for="Pelicula.Sinopsis" class="form-control" />
+                <span asp-validation-for="Pelicula.Sinopsis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pelicula.Calificacion" class="control-label"></label>
+                <input asp-for="Pelicula.Calificacion" class="form-control" />
+                <span asp-validation-for="Pelicula.Calificacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pelicula.WebStreaming" class="control-label"></label>
+                <input asp-for="Pelicula.WebStreaming" class="form-control" />
+                <span asp-validation-for="Pelicula.WebStreaming" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Volver al listado</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
