@@ -17,6 +17,12 @@
     <Compile Remove="Migrations\20191209042140_InitialCreate.Designer.cs" />
     <Compile Remove="Migrations\20191209171840_InitialCreate2.cs" />
     <Compile Remove="Migrations\20191209171840_InitialCreate2.Designer.cs" />
+    <Compile Remove="Migrations\20191212184624_New_DataAnnotations.cs" />
+    <Compile Remove="Migrations\20191212184624_New_DataAnnotations.Designer.cs" />
+    <Compile Remove="Migrations\20191212184922_New_DataAnnotations.cs" />
+    <Compile Remove="Migrations\20191212184922_New_DataAnnotations.Designer.cs" />
+    <Compile Remove="Migrations\20191212185010_New_DataAnnotations.cs" />
+    <Compile Remove="Migrations\20191212185010_New_DataAnnotations.Designer.cs" />
   </ItemGroup>
 
 

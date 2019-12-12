@@ -29,12 +29,10 @@ namespace Movies_Series_DB.Models
         public string Sinopsis { get; set; }
 
         [Range(3, 18)]
-        [Required]
         public int Calificacion { get; set; }
         
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
         [Required]
-        [StringLength(300)]
         [Display(Name = "Web-Streaming")]
         public string WebStreaming { get; set; }
     }

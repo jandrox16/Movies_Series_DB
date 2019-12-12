@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Movies_Series_DB.Data;
 
 namespace Movies_Series_DB.Migrations
 {
     [DbContext(typeof(Movies_Series_DBContext))]
-    partial class Movies_Series_DBContextModelSnapshot : ModelSnapshot
+    [Migration("20191212192939_New_DataAnnotations2")]
+    partial class New_DataAnnotations2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

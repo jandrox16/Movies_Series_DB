@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Movies_Series_DB.Data;
 
 namespace Movies_Series_DB.Migrations
 {
     [DbContext(typeof(Movies_Series_DBContext))]
-    partial class Movies_Series_DBContextModelSnapshot : ModelSnapshot
+    [Migration("20191212191451_New_DataAnnotations")]
+    partial class New_DataAnnotations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,37 +27,23 @@ namespace Movies_Series_DB.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ApellidosActPpal")
-                        .IsRequired()
-                        .HasMaxLength(20);
+                    b.Property<string>("ApellidosActPpal");
 
-                    b.Property<string>("ApellidosDir")
-                        .IsRequired()
-                        .HasMaxLength(20);
+                    b.Property<string>("ApellidosDir");
 
                     b.Property<DateTime>("FechaNacActPpal");
 
                     b.Property<DateTime>("FechaNacDir");
 
-                    b.Property<string>("NombreActPpal")
-                        .IsRequired()
-                        .HasMaxLength(20);
+                    b.Property<string>("NombreActPpal");
 
-                    b.Property<string>("NombreDir")
-                        .IsRequired()
-                        .HasMaxLength(20);
+                    b.Property<string>("NombreDir");
 
-                    b.Property<string>("PaisActPpal")
-                        .IsRequired()
-                        .HasMaxLength(20);
+                    b.Property<string>("PaisActPpal");
 
-                    b.Property<string>("PaisDir")
-                        .IsRequired()
-                        .HasMaxLength(20);
+                    b.Property<string>("PaisDir");
 
-                    b.Property<string>("PersonajeActPpal")
-                        .IsRequired()
-                        .HasMaxLength(20);
+                    b.Property<string>("PersonajeActPpal");
 
                     b.HasKey("ID");
 
