@@ -8,7 +8,9 @@
 <h2>Listado de Películas y Series</h2>
 
 <p>
-    <a asp-page="Create">Añadir elemento</a>
+    <a asp-page="Create">Añadir elemento</a> |
+    <a asp-page="../Welcome" asp-page-handler="Logout">Logout</a>
+
 </p>
 <form>
     <p>
@@ -31,8 +33,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Pelicula[0].FechaSalida)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pelicula[0].Calificacion)
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -47,6 +50,9 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.FechaSalida)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Calificacion)
                 </td>
                 <td>
                     <a asp-page="./Delete" asp-route-id="@item.ID">Eliminar</a>

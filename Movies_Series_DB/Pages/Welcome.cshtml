@@ -1,0 +1,14 @@
+﻿@page
+@model Movies_Series_DB.Pages.WelcomeModel
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<h2>Bienvenido @Model.Username</h2>
+<br />
+<div>
+    <p>En esta página encontrará un sin fin de películas y series para su disfrute, podrá ver sus sinopsis, quien la ha dirigido y protagonizado, ademas de las paginas donde puede comprar el contenido audiovisual.</p>
+    <p>Nosotros en ningun momento proveemos enlaces de descarga, el uso de esta página es exclusivamente como consulta de información.</p>
+</div>
+    <a asp-page="Welcome" asp-page-handler="Logout">Logout</a> |
+    <a asp-page="./Peliculas/Index">Ir al listado</a>
