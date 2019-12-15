@@ -27,6 +27,9 @@ namespace Movies_Series_DB.Pages.Peliculas
         public SelectList Generos { get; set; }
         [BindProperty(SupportsGet = true)]
         public string GeneroPelicula { get; set; }
+        public SelectList Calificacion { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public int CalificacionPelicula { get; set; }
 
         public async Task OnGetAsync()
         {
@@ -34,6 +37,9 @@ namespace Movies_Series_DB.Pages.Peliculas
             IQueryable<string> genreQuery = from m in _context.Pelicula
                                             orderby m.Genero
                                             select m.Genero;
+            IQueryable<int> calificacionQuery = from m in _context.Pelicula
+                                            orderby m.Calificacion
+                                            select m.Calificacion;
             var peliculas = from m in _context.Pelicula
                          select m;
             if (!string.IsNullOrEmpty(Busqueda))
@@ -44,7 +50,12 @@ namespace Movies_Series_DB.Pages.Peliculas
             {
                 peliculas = peliculas.Where(x => x.Genero == GeneroPelicula);
             }
+            if (CalificacionPelicula != 0)
+            {
+                peliculas = peliculas.Where(y => y.Calificacion == CalificacionPelicula);
+            }
             Generos = new SelectList(await genreQuery.Distinct().ToListAsync());
+            Calificacion = new SelectList(await calificacionQuery.Distinct().ToListAsync());
             Pelicula = await peliculas.ToListAsync();
         }
     }

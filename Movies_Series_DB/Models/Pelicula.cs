@@ -19,19 +19,16 @@ namespace Movies_Series_DB.Models
         [DataType(DataType.Date)]
         public DateTime FechaSalida { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
         [Required]
         [StringLength(30)]
         public string Genero { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
         [Required]
         public string Sinopsis { get; set; }
 
         [Range(3, 18)]
         public int Calificacion { get; set; }
         
-        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
         [Required]
         [Display(Name = "Web-Streaming")]
         public string WebStreaming { get; set; }

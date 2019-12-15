@@ -14,9 +14,12 @@
 </p>
 <form>
     <p>
+        Calificacion: <select asp-for="CalificacionPelicula" asp-items="Model.Calificacion">
+            <option value="">All</option>
+        </select> | 
         Genero: <select asp-for="GeneroPelicula" asp-items="Model.Generos">
             <option value="">All</option>
-        </select>
+        </select> | 
         Título: <input type="text" asp-for="Busqueda" />
         <input type="submit" value="Filter" />
     </p>
