@@ -55,7 +55,12 @@
     </dl>
 </div>
 <div>
+    |
     <a asp-page="../Casting/Details" asp-route-id="@Model.Pelicula.ID">Casting</a> |
     <a asp-page="./Edit" asp-route-id="@Model.Pelicula.ID">Editar</a> |
-    <a asp-page="./Index">Volver al listado</a>
+    <a asp-page="./Index">Volver al listado</a> |
+    <p>
+        Si aun no se han creado los datos de casting para este elemento por favor siga por
+        <a asp-page="../Casting/Create" asp-route-id="@Model.Pelicula.ID">aquí</a>
+    </p>
 </div>

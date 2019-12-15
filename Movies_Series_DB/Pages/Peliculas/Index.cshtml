@@ -8,12 +8,14 @@
 <h2>Listado de Películas y Series</h2>
 
 <p>
+    |
     <a asp-page="Create">Añadir elemento</a> |
-    <a asp-page="../Welcome" asp-page-handler="Logout">Logout</a>
+    <a asp-page="../Welcome" asp-page-handler="Logout">Logout</a> |
 
 </p>
 <form>
     <p>
+        | 
         Calificacion: <select asp-for="CalificacionPelicula" asp-items="Model.Calificacion">
             <option value="">All</option>
         </select> | 
@@ -21,7 +23,7 @@
             <option value="">All</option>
         </select> | 
         Título: <input type="text" asp-for="Busqueda" />
-        <input type="submit" value="Filter" />
+        <input type="submit" value="Filter" /> |
     </p>
 </form>
 <table class="table">

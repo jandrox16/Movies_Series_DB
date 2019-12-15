@@ -70,8 +70,9 @@
     </dl>
 
     <form method="post">
+        | 
         <input type="hidden" asp-for="Casting.ID" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-page="./Index">Volver al listado</a>
+        <a asp-page="./Details" asp-route-id="@Model.Casting.ID">Volver al Casting del elemento</a> |
     </form>
 </div>
